@@ -20,5 +20,5 @@ jobs:
       - name: Run Linter
         run: uv run ruff check . 
       - name: Run tests
-        run: "Trainee should add command to run test"
+        run: uv run pytest .
 
