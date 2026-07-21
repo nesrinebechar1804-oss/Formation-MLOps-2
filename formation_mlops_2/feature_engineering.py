@@ -4,7 +4,7 @@ import pandas as pd
 def prepare_features(data: pd.DataFrame, training_mode: bool = True) -> pd.DataFrame:
     target = 'Ba_avg'
     data = data.dropna(subset=[target], axis=0) if training_mode else  data.drop(columns=[target], errors='ignore')
-    data = create_date_features(data)
+    data=create_date_features(data)
     data = data.sort_values(by='date')
     features = ['Q_avg', 'Q_min', 'Q_max', 'Q_std']
     fillna_with_previous_values(features, data)
