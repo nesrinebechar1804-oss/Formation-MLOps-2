@@ -17,8 +17,8 @@ jobs:
         run: uv python install
       - name: Install dependencies
         run: uv sync --locked --all-groups
-        name: Run Linter
+      - name: Run Linter
         run: ruff check . 
-        name: Run tests
+      - name: Run tests
         run: "Trainee should add command to run test"
 
